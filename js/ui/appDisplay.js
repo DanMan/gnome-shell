@@ -1823,7 +1823,8 @@ var AppIcon = new Lang.Class({
         else
             this.app.activate();
 
-        Main.overview.hide();
+        if(!button || button !== 2)
+            Main.overview.hide();
     },
 
     animateLaunch: function() {
